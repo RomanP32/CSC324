@@ -29,7 +29,9 @@ myGroup.add(3);
 console.log(myGroup);
 
 
-
+git add .
+git commit -m "6"
+git push
 
 class Group{
     constructor() {

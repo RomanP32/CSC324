@@ -1,6 +1,8 @@
 /********************************************************************
  * 
- * Your introductory remarks go here.
+ * CSC 324 — Making a Table
+  This script selects the table body on the page and populates it
+  from the `artists` array of objects.
  * 
  *******************************************************************/
 
