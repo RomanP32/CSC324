@@ -2,49 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>My Favorite Bhangra Artists</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    table { border-collapse: collapse; width: 80%; margin: 20px 0; }
-    th, td { border: 1px solid #aaa; padding: 8px 10px; text-align: left; }
-    th { background:#eee; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bhangra Artists — Sort & Shuffle</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="custom.js" defer></script>
 </head>
 <body>
-  <h1>My Favorite Bhangra Artists</h1>
-  <p>The following table gives a list of great Bhangra musicians. Enjoy!</p>
+  <main class="container">
+    <h1>Bhangra Artists</h1>
 
-  <table id="artists-table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Date of Birth</th>
-        <th>Link</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+    <div class="controls">
+      <button id="sort-name" type="button">Sort by Name</button>
+      <button id="sort-birth" type="button">Sort by Year of Birth</button>
+      <button id="shuffle" type="button">Shuffle (from Original)</button>
+    </div>
 
-  <script>
-    
-    const artists = [
-      { name: "Ms Scandalous", birth: 1985, link: "https://www.youtube.com/watch?v=2FPivlfvxu0" },
-      { name: "Juggy D",       birth: 1981, link: "https://www.youtube.com/watch?v=1j4c_FVyjdI" },
-      { name: "Sukhbir Singh", birth: 1969, link: "https://www.youtube.com/watch?v=HipNEpjad0" },
-      { name: "Abrar-ul-Haq",  birth: 1989, link: "https://www.youtube.com/watch?v=JnnVlPF7eC" },
-      { name: "Rishi Rich",    birth: 1970, link: "https://www.youtube.com/watch?v=0qs-wZ9ACuA" }
-    ];
+    <table id="artists-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date of Birth</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
-    
-    const tbody = document.querySelector("#artists-table tbody");
-    tbody.innerHTML = artists.map(a => `
-      <tr>
-        <td>${a.name}</td>
-        <td>${a.birth}</td>
-        <td><a href="${a.link}" target="_blank" rel="noopener noreferrer">${a.link}</a></td>
-      </tr>
-    `).join("");
-  </script>
+    <p class="hint">Tip: “Shuffle” always randomizes from the original data.</p>
+  </main>
 </body>
 </html>
 
